@@ -22,7 +22,8 @@
     "friendlyName": "JSON",
     "machineDir": "machines/",
     "machines": [
-      "parse-json"
+      "parse",
+      "stringify"
     ],
     "testsUrl": "https://travis-ci.org/"
   },

@@ -1,5 +1,5 @@
 {
-  "machine": "parse-json",
+  "machine": "parse",
   "expectations": [
     {
       "todo": true,

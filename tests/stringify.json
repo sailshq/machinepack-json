@@ -1,0 +1,10 @@
+{
+  "machine": "stringify",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    }
+  ]
+}
