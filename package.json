@@ -12,7 +12,7 @@
   ],
   "author": "",
   "license": "MIT",
-  "dependencies":{
+  "dependencies": {
     "machine": "^4.0.0"
   },
   "devDependencies": {
@@ -23,6 +23,11 @@
     "machineDir": "machines/",
     "machines": [
       "parse-json"
-    ]
+    ],
+    "testsUrl": "https://travis-ci.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:treelinehq/machinepack-json.git"
   }
 }
