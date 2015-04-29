@@ -1,6 +1,6 @@
 {
   "name": "machinepack-json",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Encode and decode data to and from JSON.",
   "scripts": {
     "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js"
