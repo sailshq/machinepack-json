@@ -8,7 +8,7 @@
 Encode and decode data to and from JSON.
 
 
-## Installation &nbsp; [![NPM version](https://badge.fury.io/js/machinepack-json.svg)](http://badge.fury.io/js/machinepack-json) [![Build Status](https://travis-ci.org/treelinehq/machinepack-json.png?branch=master)](https://travis-ci.org/mikermcneil/machinepack-json)
+## Installation &nbsp; [![NPM version](https://badge.fury.io/js/machinepack-json.svg)](http://badge.fury.io/js/machinepack-json) [![Build Status](https://travis-ci.org/treelinehq/machinepack-json.png?branch=master)](https://travis-ci.org/treelinehq/machinepack-json)
 
 ```sh
 $ npm install machinepack-json
