@@ -2,11 +2,6 @@
   "machine": "parse",
   "expectations": [
     {
-      "todo": true,
-      "using": {},
-      "outcome": "success"
-    },
-    {
       "using": {
         "json": "{\"foo\": \"blah\" , \"stuff\": \"whatever\"}",
         "schema": "{\"foo\": \"bar\"}"
