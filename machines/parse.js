@@ -27,8 +27,8 @@ module.exports = {
     schema: {
       friendlyName: 'Expected schema',
       description: 'A representative example of what the resulting data should look like.',
-      typeclass: '*',
-      required: true
+      example: '*',
+      defaultsTo: '*'
     }
 
   },

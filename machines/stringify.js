@@ -7,9 +7,6 @@ module.exports = {
   description: 'Encode the specified value into a JSON string.',
 
 
-  extendedDescription: '',
-
-
   sync: true,
 
 
@@ -19,23 +16,16 @@ module.exports = {
   inputs: {
 
     value: {
-      friendlyName: 'Data to encode',
+      friendlyName: 'Data',
       description: 'The data to encode as a JSON string',
-      typeclass: '*',
+      example: '*',
       required: true
     }
 
   },
 
 
-  defaultExit: 'success',
-
-
   exits: {
-
-    error: {
-      description: 'Unexpected error occurred.'
-    },
 
     couldNotStringify: {
       friendlyName: 'could not stringify',
@@ -46,7 +36,7 @@ module.exports = {
     success: {
       friendlyName: 'then',
       description: 'Done.',
-      example: '...{"some json": "like this"}...'
+      example: '...{"some stringified json": "like this"}...'
     }
 
   },

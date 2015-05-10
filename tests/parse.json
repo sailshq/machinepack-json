@@ -67,6 +67,53 @@
         "schema": "{\"foo\": \"bar\"}"
       },
       "outcome": "couldNotParse"
+    },
+    {
+      "using": {
+        "json": "[{\"stuff\": \"in here\"}]",
+        "schema": "[\"*\"]"
+      },
+      "outcome": "success",
+      "returns": [
+        {
+          "stuff": "in here"
+        }
+      ]
+    },
+    {
+      "using": {
+        "json": "[{\"stuff\": \"in here\"}]",
+        "schema": "[]"
+      },
+      "outcome": "success",
+      "returns": [
+        {
+          "stuff": "in here"
+        }
+      ]
+    },
+    {
+      "using": {
+        "json": "[{\"stuff\": \"in here\"}]",
+        "schema": "*"
+      },
+      "outcome": "success",
+      "returns": [
+        {
+          "stuff": "in here"
+        }
+      ]
+    },
+    {
+      "using": {
+        "json": "[{\"stuff\": \"in here\"}]"
+      },
+      "outcome": "success",
+      "returns": [
+        {
+          "stuff": "in here"
+        }
+      ]
     }
   ]
 }
