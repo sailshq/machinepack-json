@@ -34,14 +34,7 @@ module.exports = {
   },
 
 
-  defaultExit: 'success',
-
-
   exits: {
-
-    error: {
-      description: 'Unexpected error occurred.'
-    },
 
     couldNotParse: {
       friendlyName: 'could not parse',
