@@ -13,6 +13,7 @@
   "author": "Mike McNeil",
   "license": "MIT",
   "dependencies": {
+    "lodash": "^3.8.0",
     "machine": "^6.0.1"
   },
   "devDependencies": {
@@ -23,7 +24,8 @@
     "machineDir": "machines/",
     "machines": [
       "parse",
-      "stringify"
+      "stringify",
+      "stringify-safe"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
