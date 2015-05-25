@@ -3,7 +3,7 @@
   "expectations": [
     {
       "using": {
-        "json": "{\"foo\": \"blah\" , \"stuff\": \"whatever\"}",
+        "json": "\"{\\\"foo\\\": \\\"blah\\\" , \\\"stuff\\\": \\\"whatever\\\"}\"",
         "schema": "{\"foo\": \"bar\"}"
       },
       "outcome": "success",
@@ -13,7 +13,7 @@
     },
     {
       "using": {
-        "json": "{\"foo\": \"blah\"}",
+        "json": "\"{\\\"foo\\\": \\\"blah\\\"}\"",
         "schema": "{\"foo\": \"bar\"}"
       },
       "outcome": "success",
@@ -23,7 +23,7 @@
     },
     {
       "using": {
-        "json": "{\"some_other_key\": \"blah\"}",
+        "json": "\"{\\\"some_other_key\\\": \\\"blah\\\"}\"",
         "schema": "{\"foo\": \"bar\"}"
       },
       "outcome": "success",
@@ -33,7 +33,7 @@
     },
     {
       "using": {
-        "json": "\"something else completely wrong\"",
+        "json": "\"\\\"something else completely wrong\\\"\"",
         "schema": "{\"foo\": \"bar\"}"
       },
       "outcome": "success",
@@ -70,7 +70,7 @@
     },
     {
       "using": {
-        "json": "[{\"stuff\": \"in here\"}]",
+        "json": "\"[{\\\"stuff\\\": \\\"in here\\\"}]\"",
         "schema": "[\"*\"]"
       },
       "outcome": "success",
@@ -82,7 +82,7 @@
     },
     {
       "using": {
-        "json": "[{\"stuff\": \"in here\"}]",
+        "json": "\"[{\\\"stuff\\\": \\\"in here\\\"}]\"",
         "schema": "[]"
       },
       "outcome": "success",
@@ -94,7 +94,7 @@
     },
     {
       "using": {
-        "json": "[{\"stuff\": \"in here\"}]",
+        "json": "\"[{\\\"stuff\\\": \\\"in here\\\"}]\"",
         "schema": "*"
       },
       "outcome": "success",
@@ -106,7 +106,7 @@
     },
     {
       "using": {
-        "json": "[{\"stuff\": \"in here\"}]"
+        "json": "\"[{\\\"stuff\\\": \\\"in here\\\"}]\""
       },
       "outcome": "success",
       "returns": [
