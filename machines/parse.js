@@ -27,8 +27,7 @@ module.exports = {
     schema: {
       friendlyName: 'Expected schema',
       description: 'A representative example of what the resulting data should look like.',
-      example: '*',
-      defaultsTo: '*'
+      example: '*'
     }
 
   },
@@ -45,7 +44,16 @@ module.exports = {
     success: {
       friendlyName: 'then',
       description: 'Done.',
-      getExample: function (inputs){
+      getExample: function (inputs, env){
+        var _ = env._;
+
+        // If we don't have a schema yet, the best we can do is send back "*"
+        // to indicate that this machine will respond with something JSON-serializable.
+        if (_.isUndefined(inputs.schema)) {
+          return '*';
+        }
+
+        // Otherwise we can use the provided schema.
         return inputs.schema;
       }
     }
