@@ -6,7 +6,7 @@
         "value": []
       },
       "outcome": "success",
-      "returns": "\"[]\""
+      "returns": "[]"
     },
     {
       "using": {
@@ -27,7 +27,7 @@
         ]
       },
       "outcome": "success",
-      "returns": "\"[{\\\"name\\\":\\\"Roger Wilco\\\",\\\"occupation\\\":\\\"Space Janitor\\\",\\\"age\\\":41,\\\"favoriteThings\\\":[{\\\"name\\\":\\\"broom\\\"},{\\\"name\\\":\\\"mop\\\"}]}]\""
+      "returns": "[{\"name\":\"Roger Wilco\",\"occupation\":\"Space Janitor\",\"age\":41,\"favoriteThings\":[{\"name\":\"broom\"},{\"name\":\"mop\"}]}]"
     },
     {
       "using": {
@@ -41,28 +41,28 @@
         "value": 3
       },
       "outcome": "success",
-      "returns": "\"3\""
+      "returns": "3"
     },
     {
       "using": {
         "value": true
       },
       "outcome": "success",
-      "returns": "\"true\""
+      "returns": "true"
     },
     {
       "using": {
         "value": false
       },
       "outcome": "success",
-      "returns": "\"false\""
+      "returns": "false"
     },
     {
       "using": {
         "value": 0
       },
       "outcome": "success",
-      "returns": "\"0\""
+      "returns": "0"
     }
   ]
 }
