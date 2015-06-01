@@ -3,14 +3,28 @@
   "expectations": [
     {
       "using": {
-        "value": "[]"
+        "value": []
       },
       "outcome": "success",
       "returns": "\"[]\""
     },
     {
       "using": {
-        "value": "[{\"name\": \"Roger Wilco\", \"occupation\": \"Space Janitor\", \"age\": 41, \"favoriteThings\": [ {\"name\":\"broom\"}, {\"name\":\"mop\"} ] }]"
+        "value": [
+          {
+            "name": "Roger Wilco",
+            "occupation": "Space Janitor",
+            "age": 41,
+            "favoriteThings": [
+              {
+                "name": "broom"
+              },
+              {
+                "name": "mop"
+              }
+            ]
+          }
+        ]
       },
       "outcome": "success",
       "returns": "\"[{\\\"name\\\":\\\"Roger Wilco\\\",\\\"occupation\\\":\\\"Space Janitor\\\",\\\"age\\\":41,\\\"favoriteThings\\\":[{\\\"name\\\":\\\"broom\\\"},{\\\"name\\\":\\\"mop\\\"}]}]\""
@@ -20,32 +34,32 @@
         "value": "hi"
       },
       "outcome": "success",
-      "returns": "\"\\\"hi\\\"\""
+      "returns": "\"hi\""
     },
     {
       "using": {
-        "value": "3"
+        "value": 3
       },
       "outcome": "success",
       "returns": "\"3\""
     },
     {
       "using": {
-        "value": "true"
+        "value": true
       },
       "outcome": "success",
       "returns": "\"true\""
     },
     {
       "using": {
-        "value": "false"
+        "value": false
       },
       "outcome": "success",
       "returns": "\"false\""
     },
     {
       "using": {
-        "value": "0"
+        "value": 0
       },
       "outcome": "success",
       "returns": "\"0\""

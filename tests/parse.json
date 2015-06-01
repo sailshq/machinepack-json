@@ -4,7 +4,9 @@
     {
       "using": {
         "json": "\"{\\\"foo\\\": \\\"blah\\\" , \\\"stuff\\\": \\\"whatever\\\"}\"",
-        "schema": "{\"foo\": \"bar\"}"
+        "schema": {
+          "foo": "bar"
+        }
       },
       "outcome": "success",
       "returns": {
@@ -14,7 +16,9 @@
     {
       "using": {
         "json": "\"{\\\"foo\\\": \\\"blah\\\"}\"",
-        "schema": "{\"foo\": \"bar\"}"
+        "schema": {
+          "foo": "bar"
+        }
       },
       "outcome": "success",
       "returns": {
@@ -24,7 +28,9 @@
     {
       "using": {
         "json": "\"{\\\"some_other_key\\\": \\\"blah\\\"}\"",
-        "schema": "{\"foo\": \"bar\"}"
+        "schema": {
+          "foo": "bar"
+        }
       },
       "outcome": "success",
       "returns": {
@@ -34,7 +40,9 @@
     {
       "using": {
         "json": "\"\\\"something else completely wrong\\\"\"",
-        "schema": "{\"foo\": \"bar\"}"
+        "schema": {
+          "foo": "bar"
+        }
       },
       "outcome": "success",
       "returns": {
@@ -44,7 +52,9 @@
     {
       "using": {
         "json": "23582385",
-        "schema": "{\"foo\": \"bar\"}"
+        "schema": {
+          "foo": "bar"
+        }
       },
       "outcome": "success",
       "returns": {
@@ -54,7 +64,9 @@
     {
       "using": {
         "json": "true",
-        "schema": "{\"foo\": \"bar\"}"
+        "schema": {
+          "foo": "bar"
+        }
       },
       "outcome": "success",
       "returns": {
@@ -64,14 +76,18 @@
     {
       "using": {
         "json": "something unparseable",
-        "schema": "{\"foo\": \"bar\"}"
+        "schema": {
+          "foo": "bar"
+        }
       },
       "outcome": "couldNotParse"
     },
     {
       "using": {
         "json": "\"[{\\\"stuff\\\": \\\"in here\\\"}]\"",
-        "schema": "[\"*\"]"
+        "schema": [
+          "*"
+        ]
       },
       "outcome": "success",
       "returns": [
@@ -83,7 +99,7 @@
     {
       "using": {
         "json": "\"[{\\\"stuff\\\": \\\"in here\\\"}]\"",
-        "schema": "[]"
+        "schema": []
       },
       "outcome": "success",
       "returns": [
@@ -114,6 +130,15 @@
           "stuff": "in here"
         }
       ]
+    },
+    {
+      "using": {
+        "json": "\"hi\"",
+        "schema": {
+          "foo": "string"
+        }
+      },
+      "outcome": "success"
     }
   ]
 }
