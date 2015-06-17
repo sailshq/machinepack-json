@@ -44,19 +44,6 @@ module.exports = {
     success: {
       friendlyName: 'then',
       description: 'Done.',
-      // getTypeSchema: function (schemata, env){
-      //   var _ = require('lodash');
-      //   var rttc = require('rttc');
-
-      //   // If we don't have an example (aka the "schema" input val) yet, the best we can do is send back "json"
-      //   // to indicate that this machine will respond with something JSON-serializable.
-      //   if (_.isUndefined(schemata.schema)) {
-      //     return 'json';
-      //   }
-
-      //   // Otherwise we can use the provided example ("schema" input val).
-      //   return rttc.infer(schemata.schema);
-      // },
       getExample: function (inputs, env){
         var _ = env._;
 
