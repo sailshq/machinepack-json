@@ -24,6 +24,7 @@ module.exports = {
       example: '...{"some json": "like this"}...',
       required: true
     },
+
     schema: {
       friendlyName: 'Expected schema',
       description: 'A representative example of what the resulting data should look like.',
@@ -44,24 +45,20 @@ module.exports = {
     success: {
       friendlyName: 'then',
       description: 'Done.',
-      getExample: function (inputs, env){
-        var _ = env._;
-
-        // If we don't have a schema yet, the best we can do is send back "*"
-        // to indicate that this machine will respond with something JSON-serializable.
-        if (_.isUndefined(inputs.schema)) {
-          return '*';
-        }
-
-        // Otherwise we can use the provided schema.
-        return inputs.schema;
-      }
+      like: 'schema'
     }
 
   },
 
 
   fn: function(inputs, exits) {
+    var rttc = require('rttc');
+
+    // If `schema` is set, coerce it to make sure it's a proper exemplar.
+    if (!_.isUndefined(inputs.schema)) {
+      inputs.schema = rttc.coerceExemplar(inputs.schema);
+    }
+
     var parsedJson;
     try {
       parsedJson = JSON.parse(inputs.json);
