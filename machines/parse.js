@@ -28,7 +28,8 @@ module.exports = {
     schema: {
       friendlyName: 'Expected schema',
       description: 'A representative example of what the resulting data should look like.',
-      example: '*'
+      example: '*',
+      isExemplar: true
     }
 
   },
@@ -52,12 +53,7 @@ module.exports = {
 
 
   fn: function(inputs, exits) {
-    var rttc = require('rttc');
-
-    // If `schema` is set, coerce it to make sure it's a proper exemplar.
-    if (!_.isUndefined(inputs.schema)) {
-      inputs.schema = rttc.coerceExemplar(inputs.schema);
-    }
+    var _ = require('lodash');
 
     var parsedJson;
     try {
