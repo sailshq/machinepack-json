@@ -14,7 +14,8 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "^3.9.2",
-    "machine": "^11.0.0"
+    "machine": "^11.0.1",
+    "rttc": "^8.1.5"
   },
   "devDependencies": {
     "test-machinepack-mocha": "^2.1.1"
