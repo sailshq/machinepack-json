@@ -29,7 +29,7 @@ module.exports = {
       friendlyName: 'Expected schema',
       description: 'A representative example of what the resulting data should look like.',
       example: '*',
-      isExemplar: true
+      constant: true
     }
 
   },
