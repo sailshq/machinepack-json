@@ -27,9 +27,11 @@ module.exports = {
 
     schema: {
       friendlyName: 'Expected schema',
-      description: 'A representative example of what the resulting data should look like.',
+      description: 'A representative example (RTTC exemplar) of what the resulting data should look like.',
+      moreInfoUrl: 'http://github.com/node-machine/rttc',
       example: '*',
-      constant: true
+      constant: true,
+      isExemplar: true
     }
 
   },
@@ -53,7 +55,6 @@ module.exports = {
 
 
   fn: function(inputs, exits) {
-    var _ = require('lodash');
 
     var parsedJson;
     try {

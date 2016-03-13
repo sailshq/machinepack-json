@@ -38,7 +38,7 @@ module.exports = {
 
   fn: function (inputs,exits) {
 
-    var _ = require('lodash');
+    var util = require('util');
 
     /**
      * This was modified by @mikermcneil from @isaacs' json-stringify-safe
@@ -67,13 +67,13 @@ module.exports = {
         else stack.push(value);
 
         // Do some advanced serialization
-        if (_.isError(value)){
+        if (util.isError(value)){
           value = value.stack;
         }
-        else if (_.isRegExp(value)){
+        else if (util.isRegExp(value)){
           value = value.toString();
         }
-        else if (_.isFunction(value)){
+        else if (util.isFunction(value)){
           value = value.toString();
         }
 
