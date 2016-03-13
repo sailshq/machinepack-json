@@ -39,6 +39,9 @@ module.exports = {
   fn: function (inputs,exits) {
 
     var util = require('util');
+    // Backwards compat for Node v0.10 (which doesn't have util.isFunction())
+    var isFunction = require('lodash.isfunction');
+
 
     /**
      * This was modified by @mikermcneil from @isaacs' json-stringify-safe
@@ -73,7 +76,7 @@ module.exports = {
         else if (util.isRegExp(value)){
           value = value.toString();
         }
-        else if (util.isFunction(value)){
+        else if (isFunction(value)){
           value = value.toString();
         }
 
