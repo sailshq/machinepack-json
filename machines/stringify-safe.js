@@ -38,9 +38,10 @@ module.exports = {
 
   fn: function (inputs,exits) {
 
-    var util = require('util');
-    // Backwards compat for Node v0.10 (which doesn't have util.isFunction())
+    // Backwards compat for Node v0.10 (which doesn't have `util.is*()` qualifiers)
     var isFunction = require('lodash.isfunction');
+    var isRegExp = require('lodash.isregexp');
+    var isError = require('lodash.iserror');
 
 
     /**
@@ -70,10 +71,10 @@ module.exports = {
         else stack.push(value);
 
         // Do some advanced serialization
-        if (util.isError(value)){
+        if (isError(value)){
           value = value.stack;
         }
-        else if (util.isRegExp(value)){
+        else if (isRegExp(value)){
           value = value.toString();
         }
         else if (isFunction(value)){
