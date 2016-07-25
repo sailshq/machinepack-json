@@ -7,21 +7,18 @@ module.exports = {
   description: 'Parse data from a JSON-encoded string.',
 
 
-  extendedDescription: '',
-
-
   sync: true,
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   inputs: {
 
     json: {
       friendlyName: 'JSON string',
-      description: 'The JSON string to parse',
-      example: '...{"some json": "like this"}...',
+      description: 'The JSON string to parse.',
+      example: '{"some json": "like this"}',
       required: true
     },
 
@@ -30,7 +27,6 @@ module.exports = {
       description: 'A representative example (RTTC exemplar) of what the resulting data should look like.',
       moreInfoUrl: 'http://github.com/node-machine/rttc',
       example: '*',
-      constant: true,
       isExemplar: true
     }
 
@@ -39,17 +35,17 @@ module.exports = {
 
   exits: {
 
+    success: {
+      outputFriendlyName: 'Parsed JSON',
+      outputDescription: 'The resulting Javascript object, array or literal from parsing the input string.',
+      like: 'schema'
+    },
+
     couldNotParse: {
-      friendlyName: 'could not parse',
       description: 'Could not parse provided string- must be a valid JSON string.',
       extendedDescription: 'Oftentimes this error is a result of not using double-quotes.  Refer to the official JSON specification at http://www.json.org/ for more information.'
     },
 
-    success: {
-      friendlyName: 'then',
-      description: 'Done.',
-      like: 'schema'
-    }
 
   },
 

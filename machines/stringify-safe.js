@@ -10,14 +10,14 @@ module.exports = {
   sync: true,
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   inputs: {
 
     value: {
       friendlyName: 'Data',
-      description: 'The data to encode as a JSON string',
+      description: 'The data to encode as a JSON string.',
       example: '*',
       required: true
     }
@@ -28,9 +28,9 @@ module.exports = {
   exits: {
 
     success: {
-      friendlyName: 'then',
-      description: 'Done.',
-      example: '...{"some stringified json": "like this"}...'
+      outputFriendlyName: 'JSON string',
+      outputDescription: 'The resulting JSON from stringifying from stringifying the input.',
+      outputExample: '{"some stringified json": "like this"}'
     }
 
   },

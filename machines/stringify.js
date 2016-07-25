@@ -10,14 +10,14 @@ module.exports = {
   sync: true,
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   inputs: {
 
     value: {
       friendlyName: 'Data',
-      description: 'The data to encode as a JSON string',
+      description: 'The data to encode as a JSON string.',
       example: '*',
       required: true
     }
@@ -27,17 +27,17 @@ module.exports = {
 
   exits: {
 
+    success: {
+      outputFriendlyName: 'JSON string',
+      outputDescription: 'The resulting JSON from stringifying from stringifying the input.',
+      outputExample: '{"some stringified json": "like this"}',
+    },
+
     couldNotStringify: {
-      friendlyName: 'could not stringify',
       description: 'Could not stringify provided value into a JSON string.',
       extendedDescription: 'Oftentimes this error results from attempting to stringify a circular object (i.e. has a key or array item which points back to the parent object).  Refer to the official JSON specification at http://www.json.org/ for more information.'
     },
 
-    success: {
-      friendlyName: 'then',
-      description: 'Done.',
-      example: '...{"some stringified json": "like this"}...'
-    }
 
   },
 
