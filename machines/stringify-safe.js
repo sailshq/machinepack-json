@@ -47,20 +47,20 @@ module.exports = {
     /**
      * This was modified by @mikermcneil from @isaacs' json-stringify-safe
      * (see https://github.com/isaacs/json-stringify-safe/commit/02cfafd45f06d076ac4bf0dd28be6738a07a72f9#diff-c3fcfbed30e93682746088e2ce1a4a24)
-     * @param  {*} val           [description]
-     * @return {String}               [description]
      */
-    function serializer(replacer, cycleReplacer) {
+    function serializer() {
       var stack = [];
       var keys = [];
 
-      if (!cycleReplacer) {
-        cycleReplacer = function(key, value) {
-          if (stack[0] === value) return '[Circular ~]';
-          return '[Circular ~.' + keys.slice(0, stack.indexOf(value)).join('.') + ']';
-        };
-      }
+      // Function to replace circular references with a string describing the reference.
+      // Used by the custom stringify function below.
+      var cycleReplacer = function(key, value) {
+        if (stack[0] === value) return '[Circular ~]';
+        return '[Circular ~.' + keys.slice(0, stack.indexOf(value)).join('.') + ']';
+      };
 
+      // Return a custom stringify function to be used as the second argument
+      // to the native JSON.stringify.
       return function(key, value) {
         if (stack.length > 0) {
           var thisPos = stack.indexOf(this);
@@ -81,18 +81,15 @@ module.exports = {
           value = value.toString();
         }
 
-        if (!replacer) {
-          return value;
-        }
-        return replacer.call(this, key, value);
+        return value;
       };
     }
 
+    // Serialize the string and return through the `success` exit.
     var jsonString = JSON.stringify(inputs.value, serializer());
     return exits.success(jsonString);
 
-  },
-
+  }
 
 
 };

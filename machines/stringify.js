@@ -43,13 +43,22 @@ module.exports = {
 
 
   fn: function(inputs, exits) {
+
+    // Declare a var to hold the stringified Javascript value.
     var jsonString;
+
+    // Attempt to stringify the value.
     try {
       jsonString = JSON.stringify(inputs.value);
     }
+
+    // If there are any problems, use the `couldNotStringify` exit,
+    // sending the error as output.
     catch (e){
       return exits.couldNotStringify(e);
     }
+
+    // Return the stringified value through the `success` exit.
     return exits.success(jsonString);
   }
 

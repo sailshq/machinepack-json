@@ -7,6 +7,9 @@ module.exports = {
   description: 'Parse data from a JSON-encoded string.',
 
 
+  extendedDescription: 'Takes a JSON string and transforms it (if valid) into a Javascript object, array or literal matching the provided schema.',
+
+
   sync: true,
 
 
@@ -52,14 +55,25 @@ module.exports = {
 
   fn: function(inputs, exits) {
 
+    // Declare a var to hold the parsed JSON.
     var parsedJson;
+
+    // Attempt to parse the JSON string.
     try {
       parsedJson = JSON.parse(inputs.json);
     }
+
+    // If there are any problems, use the `couldNotParse` exit,
+    // sending the error as output.
     catch (e){
       return exits.couldNotParse(e);
     }
+
+    // Return the new Javascript object, array or literal through
+    // the `success` exit.  RTTC will take care of coercing it to
+    // match the specified `schema` automatically.
     return exits.success(parsedJson);
+
   }
 
 };
