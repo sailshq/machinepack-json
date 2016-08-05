@@ -45,7 +45,7 @@ module.exports = {
     },
 
     couldNotParse: {
-      description: 'Could not parse provided string- must be a valid JSON string.',
+      description: 'Could not parse provided string, because it was not valid JSON.',
       extendedDescription: 'Oftentimes this error is a result of not using double-quotes.  Refer to the official JSON specification at http://www.json.org/ for more information.'
     },
 
