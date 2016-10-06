@@ -26,7 +26,7 @@ module.exports = {
     },
 
     schema: {
-      friendlyName: 'Expected schema',
+      friendlyName: 'Example result',
       description: 'A representative example (RTTC exemplar) of what the resulting data should look like.',
       moreInfoUrl: 'http://github.com/node-machine/rttc',
       example: '*',
