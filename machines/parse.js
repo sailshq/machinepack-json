@@ -7,7 +7,7 @@ module.exports = {
   description: 'Parse data from a JSON-encoded string.',
 
 
-  extendedDescription: 'Takes a JSON string and transforms it (if valid) into a Javascript object, array or literal matching the provided schema.',
+  extendedDescription: 'Takes a JSON string and transforms it (if valid) into a Javascript dictionary, array or literal matching the provided schema.',
 
 
   sync: true,
@@ -40,7 +40,7 @@ module.exports = {
 
     success: {
       outputFriendlyName: 'Parsed JSON',
-      outputDescription: 'The resulting Javascript object, array or literal from parsing the input string.',
+      outputDescription: 'The resulting Javascript dictionary, array or literal from parsing the input string.',
       like: 'schema'
     },
 
@@ -69,7 +69,7 @@ module.exports = {
       return exits.couldNotParse(e);
     }
 
-    // Return the new Javascript object, array or literal through
+    // Return the new Javascript dictionary, array or literal through
     // the `success` exit.  RTTC will take care of coercing it to
     // match the specified `schema` automatically.
     return exits.success(parsedJson);
